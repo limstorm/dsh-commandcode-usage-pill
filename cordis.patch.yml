@@ -1,0 +1,6 @@
+# Bundle patch for the Command Code usage pill: inserts its own loader row into
+# the web profile roster. Applied as a profile bundle layer (the `dsh.bundle.patch`
+# manifest field). The row owns no host behaviour; the browser half renders.
+- insert:
+    - id: commandcode-usage-pill
+      name: '@limstorm/dsh-commandcode-usage-pill'

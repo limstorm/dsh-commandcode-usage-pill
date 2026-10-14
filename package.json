@@ -1,0 +1,45 @@
+{
+  "name": "@limstorm/dsh-commandcode-usage-pill",
+  "version": "1.1.0",
+  "description": "DSH plugin: show the Command Code subscription's rolling 5-hour and weekly usage beside the composer's session-statistics pills.",
+  "license": "MIT",
+  "author": "limstorm",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/limstorm/dsh-commandcode-usage-pill.git"
+  },
+  "homepage": "https://github.com/limstorm/dsh-commandcode-usage-pill",
+  "bugs": "https://github.com/limstorm/dsh-commandcode-usage-pill/issues",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "commandcode",
+    "usage",
+    "composer-dock"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "client.js",
+    "index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
